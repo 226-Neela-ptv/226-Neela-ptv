@@ -1,0 +1,48 @@
+product.cs
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp7
+{
+   public class Product : Order
+    {
+        public string GetProName()
+        {
+            return " Mobile";
+        }
+    }
+}
+order.cs
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp7
+{
+    public  class Order
+    {
+        public string GetOrdName()
+        {
+            return " Amazon";
+        }
+
+    }
+}
+program.cs
+using System;
+
+namespace ConsoleApp7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Product pd= new Product();
+            string OrderName = pd.GetProName();
+            string ProductName = pd.GetOrdName();
+            Console.WriteLine(ProductName + " belongs to " + OrderName);
+        }
+    }
+}
+
